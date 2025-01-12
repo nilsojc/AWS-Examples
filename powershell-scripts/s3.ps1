@@ -6,3 +6,5 @@ $bucketName = Read-Host -Prompt 'Enter the S3 Bucket name'
 
 Write-Host "AWS Region: $region"
 Write-Host "S3 Bcuket: $bucketname"
+
+New-S3Bucket -BucketName $bucketName -Region $region
