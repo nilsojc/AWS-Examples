@@ -1,10 +1,39 @@
-Import-Module AWS.Tools.S3
+# Import AWS PowerShell Module
+Import-Module AWSPowerShell.NetCore
 
+# Set AWS Region
 $region = "us-east-1"
 
-$bucketName = Read-Host -Prompt 'Enter the S3 Bucket name'
+# Prompt for S3 Bucket Name
+$bucketName = Read-Host -Prompt 'Enter the S3 bucket name'
 
-Write-Host "AWS Region: $region"
-Write-Host "S3 Bcuket: $bucketname"
+# Function to check if the bucket exists
+function BucketExists {
+    param ($bucketName)
+    try {
+        Get-S3Bucket -BucketName $bucketName -ErrorAction Stop
+        return $true
+    } catch {
+        return $false
+    }
+}
 
-New-S3Bucket -BucketName $bucketName -Region $region
+# Create S3 Bucket if it doesn't exist
+if (-Not (BucketExists -bucketName $bucketName)) {
+    New-S3Bucket -BucketName $bucketName -Region $region
+    Write-Host "Bucket $bucketName created."
+} else {
+    Write-Host "Bucket $bucketName already exists."
+}
+
+# Create a sample file
+$fileName = "sample.txt"
+$fileContent = "Hello, S3!"
+Set-Content -Path $fileName -Value $fileContent
+
+# Upload the file to the S3 bucket
+Write-S3Object -BucketName $bucketName -File $fileName -Key $fileName
+Write-Host "File $fileName uploaded to bucket $bucketName."
+
+# Clean up local file
+Remove-Item -Path $fileName
