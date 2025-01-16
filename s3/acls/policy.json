@@ -1,0 +1,16 @@
+{
+  "Grants": [
+    {
+      "Grantee": {
+        "DisplayName": "nilsojimenez",
+        "ID": "b2a66fc951376579feef5799ccf27ae87614c8dcc63c70d6c32319ddcdb26fce",
+        "Type": "CanonicalUser"
+      },
+      "Permission": "FULL_CONTROL"
+    }
+  ],
+  "Owner": {
+    "DisplayName": "nilsojcaracciolo",
+    "ID": "6e4f19b6767fa5b87e54717888a189055c8d84e9899c9d6e68d89c0198356d9b"
+  }
+}
