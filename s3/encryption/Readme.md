@@ -43,3 +43,11 @@ aws s3api put-object \
 ```
 
 ### Put Object with SSE-C via aws s3 
+
+```sh
+openssl rand -out ssec.key 32
+
+aws s3 cp hello.txt s3://encryption-fun-nj-1234/hello.txt hello.txt
+--sse-c AES256 \
+--sse-c-key fileb://ssec.key
+```
