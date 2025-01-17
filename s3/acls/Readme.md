@@ -34,7 +34,20 @@ aws s3api list-buckets --query Owner.ID --output text
 ```sh
 aws s3api put-bucket-acl \
 --bucket acl-example-nj-1234 \
---access-control-policy file:///workspace/AWS-Examples/s3/acls/policy.json
+--access-control-policy file:///workspaces/AWS-Examples/s3/acls/policy.json
 ```
 
-# Create a  File 
+## Uploading an Object from another AWS account example 
+
+```sh
+touch bootcamp.txt
+aws s3 cp bootcamp.txt s3://acl-example-nj-1234
+aws s3 ls s3://acl-example-nj-1234
+```
+
+## Cleanup
+
+```sh
+aws s3 rm s3://acl-example-nj-1234/bootcamp.txt
+aws s3 rb s3://acl-example-nj-1234
+```
