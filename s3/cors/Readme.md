@@ -23,7 +23,12 @@ aws s3api put-bucket-website --bucket cors-fun-nj-1234 --website-configuration f
 aws s3 cp index.html s3://cors-fun-nj-1234
 ```
 
-# Applic a CORS policy
+## Upload bucket policy 2 with a javascript 
+```sh
+aws s3api put-bucket-website --bucket cors-fun2-nj-1234 --website-configuration file://website.json
+```
+
+# Apply a CORS policy
 ```sh
 
 ```
