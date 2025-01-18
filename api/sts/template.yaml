@@ -1,0 +1,3 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Create a role for us to assume and create a resource we will have access to. 
+Resources: 
