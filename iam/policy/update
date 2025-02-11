@@ -6,3 +6,4 @@ aws iam create-policy-version \
     --policy-arn arn:aws:iam::137068224350:policy/my-fun-policy \
     --policy-document "$(yq -o json policy.yml)" \
     --set-as-default
+
