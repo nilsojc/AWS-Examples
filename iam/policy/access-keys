@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# How to create keys with CLI
+
+```sh
+aws iam create-access-key --user-name yourusername
+```
+
+# How to delete keys with CLI
+
+```sh
+aws iam delete-access-key --user-name yourusername --access-key-id YOURACCESSKEYID
+```
