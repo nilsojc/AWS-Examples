@@ -1,0 +1,17 @@
+## Setting su
+
+sudo su - ec2user
+
+
+## Setting UP
+
+```sh
+sudo yum install -y amazon-efs-utils
+sudo mkdir /mnt/efs
+```
+
+## Mounting
+
+```sh
+sudo mount -t efs -o tls fs-00b38248d39e3787e:/ /mnt/efs
+```
