@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+echo "== deploy rds"
+
+STACK_NAME="rds-dms-postgres"
+
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudformation/deploy/index.html
+aws cloudformation deploy \
+--template-file cfn/postgres.yaml \
+--capabilities CAPABILITY_NAMED_IAM \
+--no-execute-changeset \
+--parameter-overrides VpcId="vpc-0f3343578740c9ee7" Subnets="subnet-0ed37fab817d99cf1,subnet-048a018b3a6f9a2b2" \
+--region us-east-1 \
+--stack-name $STACK_NAME
