@@ -4,9 +4,9 @@ Resources:
   InlineLambda:
     Type: AWS::Serverless::Function
     Metadata:
-      DockerContext: ../
+      DockerContext: /workspace/AWS-Examples/lambda/container
       Dockerfile: Dockerfile
       SamResourceId: InlineLambda
     Properties:
       PackageType: Image
-      ImageUri: 982383527471.dkr.ecr.ca-central-1.amazonaws.com/python-container-example:inlinelambda-1502e09db604-latest
+      ImageUri: 137068224350.dkr.ecr.us-east-1.amazonaws.com/python-container-example:inlinelambda-650c1ebc50d6-latest

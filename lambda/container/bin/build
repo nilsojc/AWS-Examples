@@ -14,5 +14,5 @@ function_path="${root_path}/function"
 # This will prepare the artifact to be uploaded to S3 by generating:
 # .aws-sam/build/template.yml
 echo "== SAM build..."
-echo "using template: ${template_path}"
+echo "using template: ${template_path}" \
 sam build --template-file "${template_path}" --base-dir "${function_path}"

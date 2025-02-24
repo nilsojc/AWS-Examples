@@ -1,7 +1,4 @@
 version=0.1
-[default.package.parameters]
-s3_bucket = "my-lambda-artifacts-nj-8888"
-region = "us-east-1"
 [default.deploy.parameters]
 s3_bucket = "my-lambda-artifacts-nj-8888"
 region = "us-east-1"

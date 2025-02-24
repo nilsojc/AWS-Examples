@@ -5,7 +5,7 @@ Resources:
   InlineLambda:
     Type: AWS::Serverless::Function
     Metadata:
-      DockerContext: "../"
+      DockerContext: "./"
       Dockerfile: Dockerfile
     Properties:
       PackageType: Image

@@ -7,6 +7,6 @@ Resources:
       Handler: function.handler
       Runtime: python3.12
       PackageType: Zip
-      CodeUri: s3://my-lambda-artifacts-ab-1512/zip-package-python/1168da984ad6d8facd8e4289a6feff90
+      CodeUri: s3://my-lambda-artifacts-nj-8888/zip-package-python/1168da984ad6d8facd8e4289a6feff90
     Metadata:
       SamResourceId: InlineLambda

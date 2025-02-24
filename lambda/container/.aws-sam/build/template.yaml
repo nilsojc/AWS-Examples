@@ -4,7 +4,7 @@ Resources:
   InlineLambda:
     Type: AWS::Serverless::Function
     Metadata:
-      DockerContext: ../
+      DockerContext: /workspace/AWS-Examples/lambda/container
       Dockerfile: Dockerfile
       SamResourceId: InlineLambda
     Properties:
