@@ -48,3 +48,8 @@ python ./aws-elastic-beanstalk-cli-setup/scripts/ebcli_installer.py
 ## Package or EB
 
 zip -r package.zip .
+
+
+echo 'export GEM_HOME=~/.ruby/' >> ~/.bashrc
+echo 'export PATH="$PATH:~/.ruby/bin"' >> ~/.bashrc
+source ~/.bashrc
